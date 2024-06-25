@@ -1,9 +1,9 @@
-class LoginPage {
+class UploadHomeworkPage {
     constructor(page) {
         this.page = page; 
     }
     get anchorClass4() {
-        return this.page.locator('li').filter({ hasText: 'Curso de Playwright - Clase #4 - Framework de Playwright set up inicial' })
+        return this.page.locator('li')
     }
 
     get btnUploadHomework(){
@@ -18,8 +18,8 @@ class LoginPage {
         return this.page.locator('#homeworkLink')
     }
     
-    async openClass4() {
-        await this.anchorClass4.click()
+    async openClass(text) {
+        await this.anchorClass4.filter({hasText:`${text}`}).click()
     }
     async uploadHomework() {
         await this.btnUploadHomework.click()
@@ -30,4 +30,4 @@ class LoginPage {
     }
 }
 
-module.exports = LoginPage; 
+module.exports = UploadHomeworkPage; 

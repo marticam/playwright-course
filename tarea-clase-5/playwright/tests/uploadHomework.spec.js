@@ -13,7 +13,7 @@ test.describe('Login', () => {
         const uploadHomeworkPage = new UploadHomework(page)
         await loginPage.login(USER_NAME, PASSWORD)
         await expect(loginPage.btnLogOut).toBeVisible()
-        await uploadHomeworkPage.openClass4()
+        await uploadHomeworkPage.openClass('Curso de Playwright - Clase #4 - Framework de Playwright set up inicial')
         await uploadHomeworkPage.fillHomework('')
         await uploadHomeworkPage.fillHomework('www.google.com')
         await uploadHomeworkPage.uploadHomework()
