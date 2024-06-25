@@ -1,7 +1,7 @@
 const {chromium} = require('playwright')
 require('dotenv').config()
 
-const arrayOfName = ['Backlog', 'QA', 'Quality', 'Cypress', 'Hot']
+const arrayOfName = ['Backlog', 'QA', 'Quality', 'Cypress', 'Hot', 'function']
 
 async function runTest() {
     const browser = await chromium.launch({headless: false});
